@@ -32,20 +32,19 @@ export default {
       }
     };
   },
-  created() {
-  },
+  created() {},
   methods: {
     loginSubmit() {
-      console.log(this.formData)
+      console.log(this.formData);
       this.$axios
         .post("user/login", {
           account: this.formData.username,
           password: this.formData.password
         })
-        .then((response) => {
+        .then(response => {
           console.log(response);
         })
-        .catch((error) => {
+        .catch(error => {
           console.log(error);
         });
     }
