@@ -4,7 +4,7 @@
     <el-header>Header</el-header>
     <el-container>
       <!-- 左侧 -->
-      <el-aside width="200px">
+      <el-aside :width="isTrue ? '60px':'200px' ">
         <div class="menua" @click="getMenu">|||</div>
         <el-menu
           background-color="#545c64"
@@ -126,5 +126,7 @@ export default {
 .menua {
   color: white;
   text-align: center;
+  letter-spacing: 0.2em;
+  background-color:darkgray;
 }
 </style>
