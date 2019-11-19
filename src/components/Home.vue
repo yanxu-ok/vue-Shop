@@ -1,7 +1,13 @@
 <template>
   <el-container>
     <!-- 头部 -->
-    <el-header>Header</el-header>
+    <el-header class="home-header">
+      <div>
+        <img src="../assets/1.jpg" alt srcset />
+        <span>电商管理系统</span>
+      </div>
+      <el-button type="info">退出</el-button>
+    </el-header>
     <el-container>
       <!-- 左侧 -->
       <el-aside :width="isTrue ? '60px':'200px' ">
@@ -42,74 +48,91 @@ export default {
       Menulist: [
         {
           id: 1,
-          name: "用户管理",
+          name: '用户管理',
           children: [
-            { id: 1.1, name: "aaaaaa" },
-            { id: 1.2, name: "bbbbb" },
-            { id: 1.3, name: "ccccc" },
-            { id: 1.4, name: "wafcawd" }
+            { id: 1.1, name: 'aaaaaa' },
+            { id: 1.2, name: 'bbbbb' },
+            { id: 1.3, name: 'ccccc' },
+            { id: 1.4, name: 'wafcawd' }
           ]
         },
         {
           id: 2,
-          name: "权限管理",
+          name: '权限管理',
           children: [
-            { id: 2.1, name: "aaaaaa" },
-            { id: 2.2, name: "bbbbb" },
-            { id: 2.3, name: "ccccc" },
-            { id: 2.4, name: "wafcawd" }
+            { id: 2.1, name: 'aaaaaa' },
+            { id: 2.2, name: 'bbbbb' },
+            { id: 2.3, name: 'ccccc' },
+            { id: 2.4, name: 'wafcawd' }
           ]
         },
         {
           id: 3,
-          name: "商品管理",
+          name: '商品管理',
           children: [
-            { id: 3.1, name: "aaaaaa" },
-            { id: 3.2, name: "bbbbb" },
-            { id: 3.3, name: "ccccc" },
-            { id: 3.4, name: "wafcawd" }
+            { id: 3.1, name: 'afsafd' },
+            { id: 3.2, name: 'bbbbb' },
+            { id: 3.3, name: 'ccccc' },
+            { id: 3.4, name: 'wafcawd' }
           ]
         },
         {
           id: 4,
-          name: "订单管理",
+          name: '订单管理',
           children: [
-            { id: 4.1, name: "aaaaaa" },
-            { id: 4.2, name: "bbbbb" },
-            { id: 4.3, name: "ccccc" },
-            { id: 4.4, name: "wafcawd" }
+            { id: 4.1, name: 'aaaaaa' },
+            { id: 4.2, name: 'bbbbb' },
+            { id: 4.3, name: 'ccccc' },
+            { id: 4.4, name: 'wafcawd' }
           ]
         },
         {
           id: 5,
-          name: "数据统计",
+          name: '数据统计',
           children: [
-            { id: 5.1, name: "aaaaaa" },
-            { id: 5.2, name: "bbbbb" },
-            { id: 5.3, name: "ccccc" },
-            { id: 5.4, name: "wafcawd" }
+            { id: 5.1, name: 'aaaaaa' },
+            { id: 5.2, name: 'bbbbb' },
+            { id: 5.3, name: 'ccccc' },
+            { id: 5.4, name: 'wafcawd' }
           ]
         }
       ],
       firstIcon: {
-        1: "el-icon-s-opportunity",
-        2: "el-icon-s-custom",
-        3: "el-icon-s-home",
-        4: "el-icon-s-home",
-        5: "el-icon-s-cooperation"
+        1: 'el-icon-s-opportunity',
+        2: 'el-icon-s-custom',
+        3: 'el-icon-s-home',
+        4: 'el-icon-s-home',
+        5: 'el-icon-s-cooperation'
       }
-    };
+    }
   },
   methods: {
     getMenu() {
-      this.isTrue = !this.isTrue;
+      this.isTrue = !this.isTrue
     }
   }
-};
+}
 </script>
 <style lang="scss" scoped>
 .el-header {
-  background-color: aliceblue;
+  background-color: #373d41;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+  div{
+    display: flex;
+    align-items: center;
+    span{
+      margin-left: 15px;
+    }
+  }
+  img{
+    width: 100px;
+    height: 100%;
+  }
 }
 .el-aside {
   background-color: cadetblue;
@@ -127,6 +150,6 @@ export default {
   color: white;
   text-align: center;
   letter-spacing: 0.2em;
-  background-color:darkgray;
+  background-color: darkgray;
 }
 </style>
