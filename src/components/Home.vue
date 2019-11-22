@@ -44,13 +44,13 @@ export default {
       Menulist: [
         {
           name: '首页',
-          path: '/home'
+          path: '/'
         },
         {
           name: '项目管理',
           path: '/project',
           children: [
-            { name: '添加项目', path: '/project/projectAdd' },
+            { name: '项目添加', path: '/project/projectAdd' },
             { name: '项目列表', path: '/project/projectList' }
           ]
         },
@@ -68,11 +68,6 @@ export default {
         }
       ]
     }
-  },
-  created() {
-    // const { routes: res } = this.$router.options
-    // console.log(res)
-    // this.Menulist = res
   },
   methods: {
     getMenu() {

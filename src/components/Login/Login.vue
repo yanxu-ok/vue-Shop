@@ -4,7 +4,7 @@
     <div class="login-box">
       <!-- 头像区域 -->
       <div class="img-box">
-        <img src="../assets/logo.png" alt />
+        <img src="@/assets/logo.png" alt />
       </div>
       <!-- 登录 -->
       <el-form class="login_form" :model="formData" :rules="rules" ref="loginForm">
@@ -43,7 +43,6 @@ export default {
       }
     }
   },
-  created() {},
   methods: {
     loginSubmit() {
       console.log(this.formData)
@@ -62,7 +61,9 @@ export default {
             const { data: res } = response
             // 解构赋值不错
             console.log(res)
-            this.$router.push('/home')
+            // 跳转一定要放到token之后否则跳过之后还没有token值就尴尬了
+            window.sessionStorage.setItem('token',res.data.token)
+            this.$router.push('/home')   
           }
         })
         .catch(error => {
